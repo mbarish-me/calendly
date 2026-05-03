@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Partners | Book a Consultation | Ambarish</title>
+
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+
+    <!-- Razorpay JS -->
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Our Global Partners</h1>
+            <p id="sub-header">Select a location on the map to book a consultation with our local lawyer.</p>
+        </div>
+    </header>
+
+    <main>
+        <div id="map"></div>
+
+        <!-- Slot Picker Modal -->
+        <div id="slot-modal" class="modal-overlay">
+            <div class="modal-content modal-wide">
+                <h2>Book a Consultation</h2>
+                <p class="slot-subtitle">with <span id="slot-partner-name"></span></p>
+
+                <div id="slots-container"></div>
+
+                <div class="client-form">
+                    <input type="text" id="client-name" placeholder="Your Full Name" />
+                    <input type="email" id="client-email" placeholder="Your Email Address" />
+                    <textarea id="client-notes" placeholder="Notes or questions (optional)" rows="3"></textarea>
+                </div>
+
+                <button id="proceed-btn" class="pay-btn" onclick="proceedToPayment()" disabled>Proceed to Payment — ₹50</button>
+                <button class="cancel-btn" onclick="closeSlotModal()">Cancel</button>
+            </div>
+        </div>
+
+        <!-- Payment Modal -->
+        <div id="payment-modal" class="modal-overlay">
+            <div class="modal-content">
+                <h2>Secure Checkout</h2>
+                <div class="payment-details">
+                    <p><strong>Service:</strong> 30-Minute Consultation</p>
+                    <p><strong>Lawyer:</strong> <span id="selected-partner-name"></span></p>
+                    <p><strong>Slot:</strong> <span id="selected-slot-info"></span></p>
+                    <div class="price-tag">₹50.00</div>
+                </div>
+                <button id="pay-button" class="pay-btn" onclick="completePayment()">Pay with Razorpay</button>
+                <button class="cancel-btn" onclick="backToSlots()">← Back</button>
+                <p class="sim-note">Secure payment processed by Razorpay.</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Ambarish Global Network. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+
+    <!-- App Logic -->
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,276 @@
+/* General Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f7f6;
+    color: #333;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header */
+header {
+    background-color: #ffffff;
+    padding: 30px 0;
+    text-align: center;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.2rem;
+    color: #006bff;
+}
+
+header p {
+    margin: 10px 0 0;
+    font-size: 1.1rem;
+    color: #666;
+}
+
+/* Map Container */
+#map {
+    height: 600px;
+    width: 100%;
+    border-bottom: 1px solid #e0e0e0;
+    position: relative;
+    z-index: 1;
+}
+
+/* Modal Overlay */
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(5px);
+    z-index: 9999;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.modal-content {
+    background: white;
+    padding: 40px;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.modal-wide {
+    max-width: 580px;
+    max-height: 85vh;
+    overflow-y: auto;
+    text-align: left;
+}
+
+.modal-content h2 {
+    margin-top: 0;
+    color: #333;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.slot-subtitle {
+    text-align: center;
+    color: #666;
+    margin: 0 0 20px;
+    font-size: 1rem;
+}
+
+/* Slot Picker */
+.slot-date-group {
+    margin-bottom: 20px;
+}
+
+.slot-date-group h4 {
+    margin: 0 0 10px;
+    color: #333;
+    font-size: 0.95rem;
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 6px;
+}
+
+.slot-times {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.slot-btn {
+    background: #f0f5ff;
+    color: #006bff;
+    border: 1.5px solid #006bff;
+    padding: 8px 14px;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.15s;
+}
+
+.slot-btn:hover {
+    background: #006bff;
+    color: white;
+}
+
+.slot-btn.selected {
+    background: #006bff;
+    color: white;
+    font-weight: 600;
+}
+
+.slots-loading,
+.slots-empty,
+.slots-error {
+    text-align: center;
+    padding: 20px;
+    color: #888;
+    font-size: 0.95rem;
+}
+
+.slots-error {
+    color: #dc3545;
+}
+
+/* Client Form */
+.client-form {
+    margin-top: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.client-form input,
+.client-form textarea {
+    width: 100%;
+    padding: 10px 14px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    font-family: inherit;
+    box-sizing: border-box;
+    transition: border-color 0.15s;
+}
+
+.client-form input:focus,
+.client-form textarea:focus {
+    outline: none;
+    border-color: #006bff;
+}
+
+.client-form textarea {
+    resize: vertical;
+}
+
+/* Payment details */
+.payment-details {
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    margin: 20px 0;
+    text-align: left;
+}
+
+.payment-details p {
+    margin: 5px 0;
+    font-size: 0.95rem;
+}
+
+.price-tag {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #006bff;
+    text-align: center;
+    margin-top: 15px;
+}
+
+/* Buttons */
+.pay-btn {
+    background-color: #006bff;
+    color: white;
+    border: none;
+    padding: 14px 20px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 16px;
+    transition: background 0.2s;
+}
+
+.pay-btn:hover {
+    background-color: #0056cc;
+}
+
+.pay-btn:disabled {
+    background-color: #a0c4ff;
+    cursor: not-allowed;
+}
+
+.cancel-btn {
+    background: transparent;
+    border: 1px solid #ccc;
+    color: #666;
+    padding: 10px 20px;
+    font-size: 0.9rem;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 8px;
+}
+
+.cancel-btn:hover {
+    background: #eee;
+}
+
+.sim-note {
+    font-size: 0.75rem;
+    color: #999;
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* Map Popup */
+.partner-popup {
+    text-align: center;
+}
+
+.book-btn {
+    display: inline-block;
+    background-color: #006bff;
+    color: white;
+    padding: 8px 16px;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+    margin-top: 10px;
+    cursor: pointer;
+    border: none;
+}
+
+.book-btn:hover {
+    background-color: #0056cc;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px 0;
+    font-size: 0.9rem;
+    color: #888;
+    background-color: #ffffff;
+}
