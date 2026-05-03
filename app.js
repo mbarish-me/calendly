@@ -1,5 +1,5 @@
 const RAZORPAY_KEY = 'rzp_test_SiZOGua58pAWDo';
-const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxSNIW4zRo4mkVW4hpIJNs948K7FPqowKfsr9WDYjCBMFHt6nyP8sN1ri2Bu9pYUqKb/exec';
+const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycby9JMp8lI6vuIJiDZIzLvBDEY3P9gStbxdTo9y2igB9VA98xzy8HDmfWNyxSOls6EHW/exec';
 
 // Initialize the map
 const map = L.map('map').setView([20, 0], 2);
@@ -64,7 +64,7 @@ function jsonpRequest(url, onSuccess, onError) {
     const timeout = setTimeout(() => {
         cleanup();
         onError && onError(new Error('Request timed out'));
-    }, 10000);
+    }, 30000);
 
     function cleanup() {
         clearTimeout(timeout);
