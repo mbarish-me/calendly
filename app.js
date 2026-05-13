@@ -1,5 +1,5 @@
 const RAZORPAY_KEY = 'rzp_test_SiZOGua58pAWDo';
-const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycby9JMp8lI6vuIJiDZIzLvBDEY3P9gStbxdTo9y2igB9VA98xzy8HDmfWNyxSOls6EHW/exec';
+const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzkHZgF3-LFl_wlpil9hOHrPIK3SUtc10bX7ph44ttDRDKur8-4mYkz1_ZLS2AOmJEo/exec';
 
 // Initialize the map
 const map = L.map('map').setView([20, 0], 2);
